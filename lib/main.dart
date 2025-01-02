@@ -10,8 +10,33 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false, // tira o debug banner
-      home: Scaffold(),
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        backgroundColor: Colors.cyan[300],
+        body: Center(
+          child: Container(
+            height: 300,
+            width: 300,
+            decoration: BoxDecoration(
+              color: Colors.cyan[700],
+              borderRadius: BorderRadius.circular(20),
+            ),
+            padding: EdgeInsets.all(25),
+            child: 
+          ),
+        ),
+      ),
     );
   }
 }
+
+/*
+Text(
+  "Hello there!",
+  style: TextStyle(
+    color: Colors.white,
+    fontSize: 20,
+    fontWeight: FontWeight.bold,
+  ),
+);
+*/
