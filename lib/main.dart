@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_fundamentals/pages/first_page.dart';
+import 'package:flutter_fundamentals/pages/second_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -7,27 +9,15 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  void userTapped() {
-    print("User tapped!");
-  }
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        body: Center(
-          child: GestureDetector(
-            onTap: userTapped,
-            child: Container(
-              height: 200,
-              width: 200,
-              color: Colors.cyan[200],
-              child: Center(child: Text("Tap me!")),
-            ),
-          ),
-        ),
-      ),
+      home: FirstPage(),
+      routes: {
+        '/firstpage': (context) => FirstPage(),
+        '/secondpage': (context) => SecondPage(),
+      },
     );
   }
 }
@@ -156,4 +146,20 @@ Stack(
             ),
           ],
         ),
+ */
+
+/*
+Scaffold(
+        body: Center(
+          child: GestureDetector(
+            onTap: userTapped,
+            child: Container(
+              height: 200,
+              width: 200,
+              color: Colors.cyan[200],
+              child: Center(child: Text("Tap me!")),
+            ),
+          ),
+        ),
+      ),
  */
