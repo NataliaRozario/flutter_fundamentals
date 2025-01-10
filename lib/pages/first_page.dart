@@ -13,7 +13,7 @@ class FirstPage extends StatefulWidget {
 class _FirstPageState extends State<FirstPage> {
   int _selectedIndex = 0;
 
-  void _navigatorBottomBar(int index) {
+  void _navigateBottomBar(int index) {
     setState(() {
       _selectedIndex = index;
     });
@@ -31,6 +31,8 @@ class _FirstPageState extends State<FirstPage> {
       appBar: AppBar(title: Text("1st Page")),
       body: _pages[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
+        currentIndex: _selectedIndex,
+        onTap: _navigateBottomBar,
         items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
